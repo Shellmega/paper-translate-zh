@@ -1,0 +1,51 @@
+@page { size: A4; margin: 21mm 17mm 21mm 17mm; }
+* { box-sizing: border-box; }
+html { color: #172536; }
+body { margin: 0; font-family: "Noto Serif SC", "SimSun", serif; font-size: 10.3pt; line-height: 1.67; text-align: justify; }
+.cover { height: 245mm; break-after: page; position: relative; padding: 38mm 14mm 10mm; overflow: hidden; }
+.cover::before { content: ""; position: absolute; inset: 0 0 auto; height: 10mm; background: linear-gradient(90deg,#092c49 0%,#0d6286 63%,#2c9e9b 100%); }
+.cover::after { content: ""; position: absolute; width: 102mm; height: 102mm; right: -28mm; bottom: 8mm; border: 1px solid #dbe6ed; border-radius: 50%; box-shadow: 0 0 0 17mm #f4f8fa, 0 0 0 18mm #dbe6ed, 0 0 0 35mm #f9fbfc; z-index: -1; }
+.cover-label { font-family: "Noto Sans SC", sans-serif; color: #24718c; font-size: 10pt; font-weight: 700; letter-spacing: .2em; }
+.cover h1 { font-family: "Noto Sans SC", sans-serif; color: #082b47; font-size: 26pt; line-height: 1.35; margin: 17mm 0 9mm; letter-spacing: .01em; max-width: 142mm; }
+.cover-rule { width: 32mm; height: 1.2mm; background: #25a3a1; margin-bottom: 17mm; }
+.cover-authors { display: grid; grid-template-columns: 1fr 1fr; gap: 11mm 12mm; max-width: 145mm; }
+.author { font-family: "Noto Sans SC", sans-serif; font-size: 9pt; color: #42566a; line-height: 1.65; }
+.author strong { color: #173d5a; font-size: 10.4pt; }
+.cover-foot { position: absolute; left: 14mm; bottom: 15mm; color: #708497; font-family: "Noto Sans SC", sans-serif; font-size: 8.5pt; }
+.toc { min-height: 237mm; break-after: page; padding: 7mm 3mm; }
+.toc h2 { margin-top: 0; }
+.toc-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 10mm; margin-top: 11mm; }
+.toc a { display: block; text-decoration: none; color: #28445d; border-bottom: 1px solid #e3ebef; padding: 3.2mm 0; font-family: "Noto Sans SC", sans-serif; font-size: 9pt; line-height: 1.35; }
+.toc a:hover { color: #0b718a; }
+main { padding: 0; }
+h2, h3 { font-family: "Noto Sans SC", sans-serif; text-align: left; color: #0d3651; break-after: avoid; page-break-after: avoid; }
+h2 { font-size: 15pt; line-height: 1.35; margin: 11mm 0 4.5mm; padding-bottom: 2mm; border-bottom: 1.2px solid #9cb9c9; }
+h3 { font-size: 11.7pt; line-height: 1.4; margin: 8mm 0 3mm; }
+p { margin: 0 0 3.8mm; orphans: 3; widows: 3; }
+p > strong:first-child { color: #164961; }
+ul, ol { margin: 0 0 4mm; padding-left: 1.5em; }
+li { margin: 0 0 1.7mm; break-inside: avoid; text-align: left; }
+li::marker { color: #17879a; }
+a { color: #0b637f; overflow-wrap: anywhere; }
+code { font-family: Consolas, "Cascadia Code", monospace; font-size: .88em; background: #f1f5f7; padding: .03em .2em; border-radius: 2px; overflow-wrap: anywhere; }
+pre { font-size: 8pt; line-height: 1.48; background: #f4f7f8; border-left: 2.5px solid #4195a6; padding: 3mm 4mm; margin: 3mm 0 5mm; white-space: pre-wrap; overflow-wrap: anywhere; break-inside: auto; }
+pre code { padding: 0; background: none; font-size: inherit; }
+table { border-collapse: collapse; width: 100%; table-layout: auto; font-family: "Noto Sans SC", sans-serif; font-size: 8.05pt; line-height: 1.35; margin: 1.5mm 0 5mm; }
+table.wide { font-size: 7.2pt; line-height: 1.25; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; page-break-inside: avoid; }
+th { background: #173e58; color: white; padding: 1.7mm 1.7mm; text-align: left; font-weight: 600; }
+td { padding: 1.25mm 1.7mm; border-bottom: .35px solid #cfdae1; vertical-align: top; overflow-wrap: anywhere; }
+tbody tr:nth-child(even) td { background: #f4f8fa; }
+.table-caption { font-family: "Noto Sans SC", sans-serif; font-size: 8.6pt; line-height: 1.45; text-align: left; margin: 5mm 0 1.6mm; color: #275067; break-after: avoid; }
+.figure-caption { font-family: "Noto Sans SC", sans-serif; font-size: 8.6pt; line-height: 1.5; text-align: left; background: #f2f7f9; border-left: 2.5px solid #4791a6; padding: 2.5mm 3mm; margin: 4mm 0 5mm; }
+figure { margin: 4mm 0 6mm; text-align: center; }
+figure img { display: block; max-width: 100%; max-height: 215mm; width: auto; height: auto; margin: 0 auto; object-fit: contain; }
+figcaption { font-family: "Noto Sans SC", sans-serif; font-size: 8.6pt; line-height: 1.5; text-align: left; color: #275067; margin-top: 2mm; }
+.display-math { font-family: Cambria, "Times New Roman", serif; font-size: 11.3pt; text-align: center; margin: 4mm 0 5mm; padding: 2mm 1mm; break-inside: avoid; position: relative; }
+.inline-math { font-family: Cambria, "Times New Roman", serif; font-size: 1.04em; white-space: nowrap; }
+.math-roman { font-style: normal; }
+.display-math .eqno { position: absolute; right: 0; font-size: 9pt; }
+sup, sub { font-size: .7em; line-height: 0; }
+blockquote { margin: 2mm 0 4mm; border-left: 2px solid #8bb6c3; padding-left: 3mm; color: #4a6272; }
+p.references { font-size: 8.7pt; line-height: 1.5; margin-bottom: 2.4mm; text-align: left; }
